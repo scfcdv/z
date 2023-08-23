@@ -1,1 +1,21 @@
-.<meta http-equiv="Cache-Control" content="cache">
+<html>
+<head>
+<script>
+function openHtml() {
+  // 入力欄の値を取得
+  var input = document.getElementById("input").value;
+  // リンク要素のhref属性に入力値をセット
+  var link = document.getElementById("link");
+  link.href = "data:text/html," + input;
+  // リンクをクリック
+  link.click();
+}
+</script>
+</head>
+<body>
+<h1>HTML入力欄</h1>
+<textarea id="input" rows="10" cols="50"></textarea><br>
+<button onclick="openHtml()">HTMLファイルを開く</button>
+<a id="link" target="_blank" style="display:none">リンク</a>
+</body>
+</html>
